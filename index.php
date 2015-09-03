@@ -11,6 +11,7 @@ $emp_data = $liste_employes[$emp_id];
 $agenda = get_agenda($emp_id);
  //var_dump($agenda);
 ?>
+
 <html>
 	<head>
         <meta charset = "UTF-8" />
@@ -18,7 +19,19 @@ $agenda = get_agenda($emp_id);
 	</head>
 <body>
     <?php require_once('view_bloc/_view_header.php') ?>
+<!--
+	<div id="menu">
+		<ul>
+			<?php
+/*			foreach ($agenda as  $emp_id =>$activité  ) {
+				echo '<li><a href="', $activité  ,'">',$emp_id ,'</a></li>';
+			}
+			*/?>
+		</ul>
+		</div>-->
+	<form action="" select="select">
     <h2>Activité de l'employé <?php echo $emp_data['emp_name'] ?> </h2>
+		<a href="emp_edit.php?<?=PARAM_EMP_ID?>=<?=$emp_id?>"><img src="images/crayon.png" alt="crayon"/></a>
 	<div id="agenda">
 		<table>
 			<tr><th>Heure</th><th>Activité</th></tr>	
@@ -35,6 +48,7 @@ $agenda = get_agenda($emp_id);
 ?>
 		</table>
 	</div>
+	</form>
     <?php require_once('view_bloc/_view_footer.php') ?>
 </body>
 </html>
