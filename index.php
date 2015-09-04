@@ -10,6 +10,7 @@ $liste_employes = get_employes(); // Liste des noms de tous les employés
 $emp_data = $liste_employes[$emp_id];
 $agenda = get_agenda($emp_id);
  //var_dump($agenda);
+//hello
 ?>
 
 <html>
